@@ -142,7 +142,7 @@ body {
 }
 
 .button-primary:hover {
-    background-color: color-mix(in srgb, var(--color-button-primary-bg),#000 16%);
+    background-color: color-mix(in srgb, var(--color-button-primary-bg), #000 16%);
 }
 
 .button-secondary {
@@ -151,7 +151,7 @@ body {
 }
 
 .button-secondary:hover {
-    background-color: color-mix(in srgb, var(--color-button-secondary-bg),#fff 6%);
+    background-color: color-mix(in srgb, var(--color-button-secondary-bg), #fff 6%);
 }
 
 .button:focus-visible {
