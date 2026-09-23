@@ -10,19 +10,18 @@ img {
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url(assets/fonts/mona-sans.woff2) format("woff2");
-    font-weight: 200 900;
-    font-display: swap;
-    font-feature-settings: "liga" 0;
+  font-family: "Mona Sans";
+  src: url("assets/fonts/mona-sans.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
 }
-
 @font-face {
-    font-family: "Mona Sans Mono";
-    src: url(assets/fonts/mona-sans-mono.woff2) format("woff2");
-    font-weight: 200 900;
-    font-display: swap;
-    font-feature-settings: "liga" 0;
+  font-family: "Mona Sans Mono";
+  src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
 }
 
 :root {
@@ -30,12 +29,12 @@ img {
     --font-mono: "Mona Sans Mono";
     --color-black: #000;
     --color-white: #fff;
-    --color-muted: #a4aea6;
+    --color-muted: #A4AEA6;
+    --color-border-muted: #191F1B;
     --color-cursor: #5FED83;
-    --color-border-muted: #191f1b;
     --color-button-primary-bg: #08872B;
-    --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
-    --color-button-secondary-border: rgba(255, 255, 255, 0.06);
+    --color-button-secondary-bg: rgba(0, 0, 0, 0.06);
+    --color-button-secondary-border: #D2D9D4 ;
     --color-focus: #3094ff;
     --container-width: 1280px;
     --spacing-64: 64px;
@@ -63,7 +62,6 @@ img {
     }
 }
 
-
 body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -72,8 +70,8 @@ body {
 .hero {
     --hero-text-max-width: 600px;
     --hero-content-gap: 1em;
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-black);
     text-align: center;
 }
 
@@ -100,8 +98,8 @@ body {
     letter-spacing: 1px;
     color: var(--color-muted);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 0.42em;
 }
 
@@ -143,26 +141,27 @@ body {
     padding: 0.6em 1.25em;
     font-weight: 500;
     letter-spacing: 0.16px;
-    border-radius: 0.37em;
+    border-radius: 0.375em;
     transition: background-color 300ms ease-in-out;
 }
 
 .button-primary {
     background-color: var(--color-button-primary-bg);
     border-color: transparent;
+    color: var(--color-white);
 }
 
 .button-primary:hover {
-    background-color: color-mix(in srgb, var(--color-button-primary-bg), #000 16%);
+    background-color: color-mix(in srgb, var(--color-button-primary-bg),#000 16%);
 }
 
 .button-secondary {
-    background-color: var(--color-button-secondary-bg);
-    border: var(--color-button-secondary-border);
+     background-color: var(--color-button-secondary-bg);
+     border-color: var(--color-button-secondary-border);
 }
 
 .button-secondary:hover {
-    background-color: color-mix(in srgb, var(--color-button-secondary-bg), #fff 6%);
+    background-color: color-mix(in srgb, var(--color-button-secondary-bg),#fff 6%);
 }
 
 .button:focus-visible {
