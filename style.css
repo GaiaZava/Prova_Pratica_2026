@@ -626,7 +626,7 @@ body {
     padding: 64px;
 }
 
-.info-project{
+.info-project {
     color: var(--color-black);
     font-size: var(--text-500-font-size);
     padding-bottom: 16px;
@@ -698,5 +698,43 @@ body {
     margin-right: auto;
     max-width: 476px;
 
+
+}
+
+.font-content {
+    padding: var(--spacing-64);
+    border: 1px solid var(--color-border-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--hero-content-gap);
+    max-width: 1280px;
+}
+
+.h2-font {
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: medium;
+    margin-bottom: 16px;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.p-font {
+    font-size: 16px;
+    text-align: center;
+    color: grey;
+    font-weight: 300;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 476px;
+}
+
+.font-image {
+    max-width: 640px;
 
 }
