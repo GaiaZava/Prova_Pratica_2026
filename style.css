@@ -625,14 +625,15 @@ body {
     font-weight: var(--font-weight-semibold);
 }
 
-.structure-content {
+.structure{
     padding: var(--spacing-64);
     border: 1px solid var(--color-border-muted);
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1280px;
-
+    margin-left: auto;
+margin-right: auto;
 }
 
 .photo-structure {
@@ -695,5 +696,19 @@ body {
 
 .font-image {
     max-width: 640px;
+}
 
+.colorpalette-content {
+    padding: var(--spacing-64);
+    border: 1px solid var(--color-border-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--hero-content-gap);
+
+}
+
+.color-image{
+    max-width: 640px;
+    margin-top: 24px;
 }
