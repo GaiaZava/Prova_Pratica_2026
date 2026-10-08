@@ -30,10 +30,10 @@ img {
     --font-mono: "Mona Sans Mono";
     --color-black: #000;
     --color-white: #fff;
-    --color-muted: #A4AEA6;
+    --color-muted: #58635B;
     --color-border-muted: #E4EBE6;
     --color-button-primary-bg: #08872B;
-    --color-cursor: #5FED83;
+    --color-cursor: #08872B;
     --color-focus: #3094ff;
     --color-button-secondary-bg: rgba(0, 0, 0, 0.06);
     --color-button-secondary-border: #D2D9D4;
@@ -595,8 +595,10 @@ body {
 .container-project {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: self-start;
     text-align: center;
+  
 }
 
 
@@ -604,7 +606,10 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: auto;
     padding: 64px;
+    width: 375px;
+    height: 351px;
 }
 
 .info-project {
@@ -778,4 +783,18 @@ max-width: 640px;
  color: var(--color-muted);
  font-size: 16px;
  line-height: 150%;
+}
+
+@media (max-width: 640px) {
+    .box-project {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container-project {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
