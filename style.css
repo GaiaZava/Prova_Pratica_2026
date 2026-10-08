@@ -116,10 +116,31 @@ body {
     font-size: var(--heading-1-font-size);
     line-height: var(--heading-1-line-height);
 }
+.heading-heading-size-4 {
+   color: var(--color-black);
+   font-size: var(--text-400-font-size);
+   font-weight: var(--font-weight-medium);
+}
 
 .text-size-200 {
     font-size: var(--text-200-font-size);
     line-height: var(--text-200-line-height);
+}
+.color-muted {
+    color: var(--color-muted);
+}
+ 
+.text-center {
+    text-align: center;
+}
+.border-inline {
+    border-left: 1px solid var(--color-border-muted);
+    border-right: 1px solid var(--color-border-muted);
+ 
+}
+.theme-light {
+    --color-muted: #58635B;
+    --color-border-muted: #E4EBE6;
 }
 
 .hero-text {
@@ -485,7 +506,7 @@ body {
 }
 
 /* Su desktop JS rimuove popover e gli elementi si dispongono in linea */
-@media (min-width: 63.25rem) {
+@media (min-width: 1000px) {
     .navigation {
         --navigation-inline-list-padding: 0 0 0 1em;
         --navigation-inline-link-padding: 0 0.25em;
@@ -543,25 +564,6 @@ body {
         outline: var(--focus-outline-width) solid var(--color-focus);
         outline-offset: var(--focus-outline-offset);
     }
-}
-
-/* Destinazioni provvisorie dei link, da completare/sostituire in base al vostro case study */
-.chapters {
-    --chapters-padding: 2em 1.5em;
-    --chapters-section-min-height: 65vh;
-    --chapters-section-padding-top: 2em;
-    padding: var(--chapters-padding);
-    line-height: var(--text-200-line-height);
-}
-
-.chapters section {
-    min-height: var(--chapters-section-min-height);
-    padding-top: var(--chapters-section-padding-top);
-    border-top: var(--border-width) solid var(--color-border-muted);
-}
-
-.chapters a {
-    color: inherit;
 }
 
 .container-hero {
@@ -664,6 +666,7 @@ margin-right: auto;
 
 .homepage-image {
     max-width: 640px;
+    padding-bottom: 64px;
 }
 
 
@@ -698,6 +701,7 @@ margin-right: auto;
 .section-h3{
 font-size: var(--text-600-font-size);
 font-weight: var(--font-weight-medium);
+margin-bottom: 16px;
 }
 
 .section-description{
@@ -744,12 +748,24 @@ color: var(--color-muted)
 }
 
 .narrazione-image { 
-max-height: 422px;
+max-width: 640px;
 }
 
 .narrazione-content {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     gap: 64px;
+}
+
+.title-narrow-box{
+    font-size: var(--text-700-font-size);
+}
+
+.case-study-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 21px;
 }
