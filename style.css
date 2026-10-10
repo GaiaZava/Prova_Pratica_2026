@@ -854,7 +854,7 @@ max-width: 640px;
 }
 
 .invite-text {
-    color: var(--color-muted);
+    color: var(--color-navigation);
     font-size: var(--text-200-font-size);
     text-align: center;
     font-weight: var(--font-weight-regular);
