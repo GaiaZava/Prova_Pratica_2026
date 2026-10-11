@@ -59,3 +59,17 @@ desktopMedia.addEventListener('change', function () {
   else if (desktopMedia.matches && focusOnButton) navigationPanel.querySelector('a').focus();
   else if (!desktopMedia.matches && focusInNavigation) navigationButton.focus();
 });
+
+
+const tabItems = document.querySelectorAll(".breakoutTabs-item");
+
+tabItems.forEach(function (item) {
+  const button = item.querySelector(".breakoutTabs-button");
+
+  button.addEventListener("click", function () {
+    tabItems.forEach(function (other) {
+      other.classList.remove("selected");
+    });
+    item.classList.add("selected");
+  });
+});

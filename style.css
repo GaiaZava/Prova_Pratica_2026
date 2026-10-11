@@ -122,12 +122,6 @@ body {
 }
 
 
-.heading-size-4 {
-   color: var(--color-black);
-   font-size: var(--text-700-font-size);
-   font-weight: var(--font-weight-medium);
-}
-
 .hero-text {
     max-width: var(--hero-text-max-width);
 }
@@ -611,17 +605,6 @@ body {
   border-top: 1px solid var(--color-border-muted);
 }
 
-.info-project {
-    color: var(--color-black);
-    font-size: var(--text-500-font-size);
-    padding-bottom: 16px;
-}
-
-.text-info-project {
-    color: var(--color-muted);
-    font-size: var(--text-200-font-size);
-    font-weight: var(--font-weight-semibold);
-}
 .project{
     padding: var(--spacing-64);
     border: 1px solid var(--color-border-muted);
@@ -642,14 +625,6 @@ margin-right: auto;
     max-width: 1280px;
     margin-left: auto;
 margin-right: auto;
-}
-
-.photo-structure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--spacing-64);
-    border-color: var(--color-border-muted);
 }
 
 .homepage-grid-content {
@@ -793,9 +768,6 @@ max-width: 640px;
     margin-right: auto;
 }
 
-.title-narrow-box{
-    font-size: var(--text-700-font-size);
-}
 
 .case-study-intro {
     display: flex;
@@ -812,6 +784,7 @@ max-width: 640px;
 }
 
 .breakoutTabs-image {
+    display: none;
    max-width: 1158px;
    width: 100%;
    height: auto;
@@ -838,9 +811,10 @@ max-width: 640px;
 }
 
 .breakoutTabs-button {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 12px;
     align-items: center;
-    gap: 12px;
     width: 100%;
     padding: 16px 0;
     border: 0;
@@ -850,6 +824,7 @@ max-width: 640px;
     font-weight: var(--font-weight-medium);
     color: var(--color-black);
     text-align: start;
+    cursor: pointer;
 }
 
 .breakoutTabs-item.selected .breakoutTabs-button {
@@ -857,6 +832,7 @@ max-width: 640px;
 }
 
 .breakoutTabs-button svg {
+    grid-column: 1 / 3 ;
     flex-shrink: 0;
 }
 
@@ -866,11 +842,13 @@ max-width: 640px;
 }
 
 .breakoutTabs-text {
+    display: none;
     color: var(--color-muted);
     font-family: var(--font-body);
     font-size: var(--text-200-font-size);
     font-weight: var(--font-weight-regular);
     line-height: 150%;
+    
 }
 
 .breakoutTabs-item.selected .breakoutTabs-text {
@@ -903,8 +881,6 @@ max-width: 640px;
 
 .invito {
     background-color: var(--color-black);
-    width: none;
-
 }
 
 .enter-invite {
@@ -1052,5 +1028,22 @@ max-width: 640px;
     .content-hero {
         flex-direction: column;
         gap: 24px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .breakoutTabs-list {
+        display: flex;
+       flex-direction: row;
+       gap: 24px;
+    }
+
+    .breakoutTabs-item {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .breakoutTabs-text {
+        display: block;
     }
 }
