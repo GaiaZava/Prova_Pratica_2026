@@ -67,11 +67,13 @@ img {
     --radius-pill: 100em;
     --layer-navigation: 90;
     --layer-skip-link: 100;
+    --base-size-16: 16px;
 }
 
 @media (max-width: 640px) {
     :root {
         --heading-1-font-size: 36px;
+        --spacing-64: 24px;
     }
 }
 
@@ -781,6 +783,16 @@ max-width: 640px;
     gap: 64px;
 }
 
+.narrow-box {
+    padding: var(--spacing-64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .title-narrow-box{
     font-size: var(--text-700-font-size);
 }
@@ -795,21 +807,74 @@ max-width: 640px;
     margin: 0 auto;
 }
 
-.image-footer {
-    height: 651px;
-    width: 1158px;
+.breakoutTabs {
+    width: 100%;
 }
 
-.h2-case-study {
- font-size: 34px;
-    line-height: 130%;
-    padding-bottom: 16px;
+.breakoutTabs-image {
+   max-width: 1158px;
+   width: 100%;
+   height: auto;
+   margin-inline: auto;
 }
 
-.p-case-study {
- color: var(--color-muted);
- font-size: 16px;
- line-height: 150%;
+.breakoutTabs:has(#breakoutTabs-item-1.selected) .breakoutTabs-image:nth-of-type(1),
+.breakoutTabs:has(#breakoutTabs-item-2.selected) .breakoutTabs-image:nth-of-type(2),
+.breakoutTabs:has(#breakoutTabs-item-3.selected) .breakoutTabs-image:nth-of-type(3) {
+    display: block;
+}
+
+.breakoutTabs-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.breakoutTabs-item {
+ border-top: 1px solid var(--color-border-muted);
+}
+
+.breakoutTabs-item.selected {
+    border-top-color: var(--color-cursor);
+}
+
+.breakoutTabs-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 0;
+    border: 0;
+    background: none;
+    font-size: var(--text-350-font-size);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-black);
+    text-align: start;
+}
+
+.breakoutTabs-item.selected .breakoutTabs-button {
+    color: var(--color-black);
+}
+
+.breakoutTabs-button svg {
+    flex-shrink: 0;
+}
+
+.breakoutTabs-button:focus-visible {
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+.breakoutTabs-text {
+    color: var(--color-muted);
+    font-family: var(--font-body);
+    font-size: var(--text-200-font-size);
+    font-weight: var(--font-weight-regular);
+    line-height: 150%;
+}
+
+.breakoutTabs-item.selected .breakoutTabs-text {
+    display: block;
 }
 
 @media (max-width: 640px) {
