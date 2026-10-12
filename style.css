@@ -803,6 +803,7 @@ body {
 }
 
 .breakoutTabs-item {
+    position: relative;
     border-top: 1px solid var(--color-border-muted);
 }
 
@@ -825,6 +826,12 @@ body {
     color: var(--color-black);
     text-align: start;
     cursor: pointer;
+}
+
+.breakoutTabs-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }
 
 .breakoutTabs-item.selected .breakoutTabs-button {
@@ -855,6 +862,15 @@ body {
     display: block;
 }
 
+.breakoutTabs-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.breakoutTabs-item.selected .breakoutTabs-arrow {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 640px) {
     .box-project {
         padding: 1.5rem;
@@ -875,6 +891,10 @@ body {
     .box-project+.box-project {
         border-top: none;
         border-left: 1px solid var(--color-border-muted);
+    }
+
+    .breakoutTabs-arrow {
+        display: none;
     }
 
 }
@@ -1026,7 +1046,7 @@ body {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 800px) {
     .content-hero {
         flex-direction: column;
         gap: 24px;
